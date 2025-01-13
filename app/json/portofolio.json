@@ -1,0 +1,72 @@
+{
+  "data1": [
+    {
+      "title": "Kelas Pintar",
+      "img": "/assets/thumbnail/kp.png",
+      "href": "https://kelaspintar.id/",
+      "isPublic": true
+    },
+    {
+      "title": "Landing Page Staycation",
+      "img": "/assets/thumbnail/staycation.png",
+      "href": "https://staycation-hotel.vercel.app/",
+      "isPublic": true
+    },
+    {
+      "title": "Landing Page Trustlink",
+      "img": "/assets/thumbnail/trustlink.png",
+      "href": "https://www.withtrustlink.com/",
+      "isPublic": true
+    },
+    {
+      "title": "Battle Tryout Kelas Pintar",
+      "img": "/assets/thumbnail/battle-pintar.png",
+      "href": "https://battle-pintar.vercel.app/",
+      "isPublic": true
+    },
+    {
+      "title": "CariParkir BOTS",
+      "img": "/assets/thumbnail/cp.png",
+      "href": "https://bookinglockey.cariparkir.co.id/x1A83M/order",
+      "isPublic": false
+    },
+    {
+      "title": "SPPBE Dashbord System",
+      "img": "/assets/thumbnail/sppbe.png",
+      "href": "https://sppbe.stag.sppbe-digital.com/",
+      "isPublic": false
+    }
+  ],
+  "data2": [
+    {
+      "title": "Open Banking App",
+      "img": "/assets/thumbnail/open-banking.png",
+      "href": "https://app.withtrustlink.com/login",
+      "isPublic": false
+    },
+    {
+      "title": "Sport Massage",
+      "img": "/assets/thumbnail/massage.png",
+      "href": "https://play.google.com/store/apps/details?id=com.sport.project_ibu_ayu_v2&hl=en",
+      "isPublic": true
+    },
+    {
+      "title": "Absensi Karyawan",
+      "img": "/assets/thumbnail/absensi.png",
+      "href": "https://absensikaryawan.web.id/",
+      "isPublic": false
+    },
+    {
+      "title": "GMP Coin",
+      "img": "/assets/thumbnail/gmp.png",
+      "href": "https://app.gmpcoin.io/",
+      "isPublic": false
+    },
+    {
+      "title": "Landing Page Asy-Syfa’",
+      "img": "/assets/thumbnail/syfa.png",
+      "href": "https://asy-syifa.site/",
+      "isPublic": true
+    }
+  ]
+}

@@ -23,6 +23,7 @@
     "@mantine/nprogress": "^7.15.3",
     "@mantine/spotlight": "^7.15.3",
     "@mantine/tiptap": "^7.15.3",
+    "@tabler/icons-react": "^3.28.1",
     "@tiptap/extension-link": "^2.11.2",
     "@tiptap/pm": "^2.11.2",
     "@tiptap/react": "^2.11.2",
@@ -33,6 +34,7 @@
     "prettier-plugin-organize-imports": "^4.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-fast-marquee": "^1.6.5",
     "recharts": "2"
   },
   "devDependencies": {

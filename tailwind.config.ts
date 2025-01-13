@@ -12,6 +12,9 @@ export default {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)'
+      },
+      backgroundImage: {
+        'pattern-wave': "url('../public/assets/backgrounds/pattern_wave.svg')"
       }
     }
   },

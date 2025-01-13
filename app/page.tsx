@@ -1,83 +1,175 @@
-import Image from 'next/image';
+'use client';
+
+import { Button, Card, Container, Divider, Flex, Grid, Image } from '@mantine/core';
+import { IconBuildings, IconBusinessplan, IconUser } from '@tabler/icons-react';
+import Marquee from 'react-fast-marquee';
+import portfolio from './json/portofolio.json';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{' '}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <section className="tw-bg-pattern-wave tw-bg-cover">
+        <Container
+          size={'xl'}
+          className="tw-h-[100dvh] tw-flex tw-justify-center tw-gap-4 tw-items-center tw-overflow-hidden"
+        >
+          <Grid
+            gutter={'xl'}
+            align="center"
+            w={'100%'}
+            styles={{
+              inner: {
+                width: '100%'
+              }
+            }}
+          >
+            <Grid.Col span={{ base: 12, md: 6 }}>
+              <Flex direction={'column'} gap={'xl'} justify={'center'} pr={{ base: 0, md: 50 }}>
+                <Card withBorder radius={'xl'} w={'max-content'} py={5}>
+                  IT Services & Solutions
+                </Card>
+                <h1 className="tw-text-6xl tw-font-bold">
+                  Transform Your Ideas into Stunning Websites
+                </h1>
+                <p className="tw-text-gray-500">
+                  At Bagi Website, we specialize in creating innovative and user-friendly web
+                  solutions. Whether you’re starting a new project or upgrading your existing site,
+                  our expert team is here to deliver exceptional results that drive growth and
+                  enhance your online presence.
+                </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+                <Button
+                  size="lg"
+                  radius={'xl'}
+                  w={'max-content'}
+                  style={{
+                    outline: '2px solid var(--mantine-primary-color-filled)',
+                    outlineOffset: 'calc(.125rem* var(--mantine-scale))'
+                  }}
+                >
+                  Start the Transformation
+                </Button>
+
+                <Card shadow={'sm'} radius={'md'}>
+                  <Flex gap={'xl'} justify={'space-around'} className="tw-text-gray-500">
+                    <Flex direction={'column'} gap={4} align={'center'}>
+                      <IconUser size={40} />
+                      <h1 className="tw-text-lg">Individuals</h1>
+                    </Flex>
+                    <Divider orientation="vertical" />
+                    <Flex direction={'column'} gap={4} align={'center'}>
+                      <IconBusinessplan size={40} />
+                      <h1 className="tw-text-lg">Bussiness</h1>
+                    </Flex>
+                    <Divider orientation="vertical" />
+                    <Flex direction={'column'} gap={4} align={'center'}>
+                      <IconBuildings size={40} />
+                      <h1 className="tw-text-lg">Companies</h1>
+                    </Flex>
+                  </Flex>
+                </Card>
+              </Flex>
+            </Grid.Col>
+            <Grid.Col span={{ base: 12, md: 6 }} className="tw-h-[100dvh]">
+              <Flex className="tw-h-[100dvh]" gap={20}>
+                <Marquee direction="down" style={{ overflowX: 'visible' }}>
+                  {portfolio.data1.map((it, index: number) => (
+                    <Image
+                      key={index}
+                      src={it.img}
+                      alt="bagiwebsite-profesional-group"
+                      className="tw-rounded-lg tw-shadow-lg"
+                      w={300}
+                      h={280}
+                      loading="lazy"
+                    />
+                  ))}
+                </Marquee>
+                <Marquee direction="up" style={{ overflowX: 'visible' }}>
+                  {portfolio.data2.map((it, index: number) => (
+                    <Image
+                      key={index}
+                      src={it.img}
+                      alt="bagiwebsite-profesional-group"
+                      className="tw-rounded-lg tw-shadow-lg"
+                      w={300}
+                      h={280}
+                      loading="lazy"
+                    />
+                  ))}
+                </Marquee>
+              </Flex>
+            </Grid.Col>
+          </Grid>
+        </Container>
+      </section>
+
+      <section className="tw-bg-pattern-wave tw-bg-cover">
+        <Container
+          size={'xl'}
+          className="tw-h-[100dvh] tw-flex tw-justify-center tw-gap-4 tw-items-center tw-overflow-hidden"
+        >
+          <Grid
+            gutter={'xl'}
+            align="center"
+            w={'100%'}
+            styles={{
+              inner: {
+                width: '100%'
+              }
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="/file.svg" alt="File icon" width={16} height={16} />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="/window.svg" alt="Window icon" width={16} height={16} />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            <Grid.Col span={{ base: 12, md: 6 }}>
+              <Flex direction={'column'} gap={'xl'} justify={'center'} pr={{ base: 0, md: 50 }}>
+                <Card withBorder radius={'xl'} w={'max-content'} py={5}>
+                  IT Services & Solutions
+                </Card>
+                <h1 className="tw-text-4xl tw-font-bold">
+                  Transform Your Ideas into <br /> Stunning Websites
+                </h1>
+                <p className="tw-text-gray-500">
+                  At Bagi Website, we specialize in creating innovative and user-friendly web
+                  solutions. Whether you’re starting a new project or upgrading your existing site,
+                  our expert team is here to deliver exceptional results that drive growth and
+                  enhance your online presence.
+                </p>
+
+                <Button
+                  size="lg"
+                  radius={'xl'}
+                  w={'max-content'}
+                  style={{
+                    outline: '2px solid var(--mantine-primary-color-filled)',
+                    outlineOffset: 'calc(.125rem* var(--mantine-scale))'
+                  }}
+                >
+                  Start the Transformation
+                </Button>
+
+                <Card shadow={'sm'} radius={'md'}>
+                  <Flex gap={'xl'} justify={'space-between'} className="tw-text-gray-500">
+                    <Flex direction={'column'} gap={4} align={'center'}>
+                      <IconUser />
+                      <h1 className="tw-text-lg">Individuals</h1>
+                    </Flex>
+                    <Divider orientation="vertical" />
+                    <Flex direction={'column'} gap={4} align={'center'}>
+                      <IconBusinessplan />
+                      <h1 className="tw-text-lg">Bussiness</h1>
+                    </Flex>
+                    <Divider orientation="vertical" />
+                    <Flex direction={'column'} gap={4} align={'center'}>
+                      <IconBuildings />
+                      <h1 className="tw-text-lg">Companies</h1>
+                    </Flex>
+                  </Flex>
+                </Card>
+              </Flex>
+            </Grid.Col>
+            <Grid.Col span={{ base: 12, md: 6 }} className="tw-p-0"></Grid.Col>
+          </Grid>
+        </Container>
+      </section>
+    </>
   );
 }

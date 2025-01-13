@@ -1,6 +1,9 @@
+import { MantineProvider } from '@mantine/core';
 import '@mantine/core/styles.css';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import Header from './components/header';
+import theme from './config/theme';
 import './globals.css';
 
 const geistSans = Geist({
@@ -25,7 +28,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <head>
+        <link rel="shortcut icon" href="/assets/images/logo_bagiwebsite.png" type="image/x-icon" />
+        <title>BAGIWEBSITE</title>
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <MantineProvider theme={theme}>
+          <Header />
+          <div className="tw-mt-20 lg:tw-mt-0">{children}</div>
+        </MantineProvider>
+      </body>
     </html>
   );
 }
