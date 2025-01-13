@@ -35,7 +35,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <MantineProvider theme={theme}>
           <Header />
-          <div className="tw-mt-20 lg:tw-mt-0">{children}</div>
+          <div className="tw-mt-28 lg:tw-mt-8">{children}</div>
         </MantineProvider>
       </body>
     </html>
