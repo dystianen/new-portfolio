@@ -45,7 +45,7 @@ export default function AboutUs() {
 
           <Flex direction={'column'} gap={80}>
             {portfolio.allData.map((it, index) => (
-              <motion.div
+              <motion.a
                 key={index}
                 initial={{ x: index % 2 === 0 ? -100 : 100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -53,6 +53,8 @@ export default function AboutUs() {
                   duration: 1
                 }}
                 viewport={{ once: true }}
+                href={it.href}
+                target="_blank"
               >
                 <Flex
                   gap={'xl'}
@@ -73,7 +75,7 @@ export default function AboutUs() {
                     </Button>
                   </Flex>
                 </Flex>
-              </motion.div>
+              </motion.a>
             ))}
           </Flex>
         </Container>

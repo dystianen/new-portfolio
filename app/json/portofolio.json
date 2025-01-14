@@ -2,71 +2,49 @@
   "data1": [
     {
       "title": "Kelas Pintar",
-      "img": "/assets/thumbnail/kp.png",
-      "href": "https://kelaspintar.id/",
-      "isPublic": true
+      "img": "/assets/thumbnail/kp.png"
     },
     {
       "title": "Landing Page Staycation",
-      "img": "/assets/thumbnail/staycation.png",
-      "href": "https://staycation-hotel.vercel.app/",
-      "isPublic": true
+      "img": "/assets/thumbnail/staycation.png"
     },
     {
       "title": "Landing Page Trustlink",
-      "img": "/assets/thumbnail/trustlink.png",
-      "href": "https://www.withtrustlink.com/",
-      "isPublic": true
+      "img": "/assets/thumbnail/trustlink.png"
     },
     {
       "title": "Battle Tryout Kelas Pintar",
-      "img": "/assets/thumbnail/battle-pintar.png",
-      "href": "https://battle-pintar.vercel.app/",
-      "isPublic": true
+      "img": "/assets/thumbnail/battle-pintar.png"
     },
     {
       "title": "CariParkir BOTS",
-      "img": "/assets/thumbnail/cp.png",
-      "href": "https://bookinglockey.cariparkir.co.id/x1A83M/order",
-      "isPublic": false
+      "img": "/assets/thumbnail/cp.png"
     },
     {
       "title": "SPPBE Dashbord System",
-      "img": "/assets/thumbnail/sppbe.png",
-      "href": "https://sppbe.stag.sppbe-digital.com/",
-      "isPublic": false
+      "img": "/assets/thumbnail/sppbe.png"
     }
   ],
   "data2": [
     {
       "title": "Open Banking App",
-      "img": "/assets/thumbnail/open-banking.png",
-      "href": "https://app.withtrustlink.com/login",
-      "isPublic": false
+      "img": "/assets/thumbnail/open-banking.png"
     },
     {
       "title": "Sport Massage",
-      "img": "/assets/thumbnail/massage.png",
-      "href": "https://play.google.com/store/apps/details?id=com.sport.project_ibu_ayu_v2&hl=en",
-      "isPublic": true
+      "img": "/assets/thumbnail/massage.png"
     },
     {
       "title": "Absensi Karyawan",
-      "img": "/assets/thumbnail/absensi.png",
-      "href": "https://absensikaryawan.web.id/",
-      "isPublic": false
+      "img": "/assets/thumbnail/absensi.png"
     },
     {
       "title": "GMP Coin",
-      "img": "/assets/thumbnail/gmp.png",
-      "href": "https://app.gmpcoin.io/",
-      "isPublic": false
+      "img": "/assets/thumbnail/gmp.png"
     },
     {
       "title": "Landing Page Asy-Syfa’",
-      "img": "/assets/thumbnail/syfa.png",
-      "href": "https://asy-syifa.site/",
-      "isPublic": true
+      "img": "/assets/thumbnail/syfa.png"
     }
   ],
   "allData": [
@@ -75,6 +53,34 @@
       "desc": "Proyek Kelas Pintar adalah platform pembelajaran digital yang dirancang untuk memberikan pengalaman pendidikan yang terintegrasi, modern, dan efektif bagi siswa, guru, dan orang tua. Kami mengembangkan solusi inovatif yang mencakup materi pembelajaran berbasis kurikulum, latihan interaktif, serta fitur personalisasi yang membantu siswa mencapai hasil belajar terbaik. Dalam proyek ini, kami fokus pada desain antarmuka yang intuitif, navigasi yang mudah, dan aksesibilitas di berbagai perangkat untuk memastikan pengguna dari semua kalangan dapat menikmati pengalaman belajar yang optimal. Dengan pendekatan berbasis teknologi dan kebutuhan pengguna, proyek Kelas Pintar menjadi wujud nyata transformasi pendidikan di era digital.",
       "img": "/assets/thumbnail/kp.png",
       "href": "https://kelaspintar.id/",
+      "isPublic": true
+    },
+    {
+      "title": "Pengen Umroh",
+      "desc": "Proyek Pengen Umroh adalah platform digital yang dirancang untuk mempermudah calon jamaah dalam merencanakan perjalanan ibadah umroh. Aplikasi ini menyediakan informasi lengkap tentang paket umroh, jadwal keberangkatan, rincian biaya, dan layanan tambahan yang dapat disesuaikan dengan kebutuhan pengguna. Dengan antarmuka yang ramah pengguna dan fitur pemesanan yang praktis, Pengen Umroh menawarkan pengalaman yang nyaman, mulai dari perencanaan hingga keberangkatan. Proyek ini bertujuan untuk memberikan kemudahan, transparansi, dan kenyamanan bagi jamaah, sekaligus mendukung perjalanan ibadah yang aman dan berkesan.",
+      "img": "/assets/thumbnail/pengen_umroh.png",
+      "href": "https://pengenumroh.com/",
+      "isPublic": true
+    },
+    {
+      "title": "IDI Cabang Tangerang",
+      "desc": "Proyek IDI Cabang Tangerang adalah platform digital yang dirancang untuk mendukung kegiatan Ikatan Dokter Indonesia (IDI) Cabang Tangerang. Sistem ini menyediakan fitur-fitur seperti manajemen keanggotaan, informasi kegiatan organisasi, pengelolaan data administrasi, dan layanan komunikasi antar anggota. Dengan antarmuka yang modern dan user-friendly, platform ini mempermudah akses informasi bagi para anggota IDI, seperti jadwal seminar, pelatihan, dan pembaruan regulasi medis. Proyek ini bertujuan untuk meningkatkan efisiensi operasional organisasi, memperkuat kolaborasi antar anggota, dan mendukung profesionalisme dokter di wilayah Tangerang.",
+      "img": "/assets/thumbnail/IDI.png",
+      "href": "https://idicabangtangerang.org/",
+      "isPublic": true
+    },
+    {
+      "title": "Beyond - PKP",
+      "desc": "Proyek PKP Beyeon adalah platform layanan teknologi informasi yang dirancang untuk mendukung kebutuhan bisnis dalam berbagai aspek IT. Solusi ini mencakup layanan pengelolaan infrastruktur IT, pengembangan aplikasi, layanan konsultasi teknologi, hingga implementasi sistem yang disesuaikan dengan kebutuhan klien. Dengan pendekatan berbasis teknologi terkini dan tim ahli yang berpengalaman, PKP Beyeon memberikan solusi yang handal dan efisien untuk meningkatkan produktivitas serta kinerja operasional bisnis. Proyek ini bertujuan untuk membantu klien menghadapi tantangan teknologi dengan solusi inovatif yang mendukung pertumbuhan dan keberlanjutan bisnis mereka.",
+      "img": "/assets/thumbnail/beyond.png",
+      "href": "https://www.pkp.co.id/en/",
+      "isPublic": true
+    },
+    {
+      "title": "Sehati Training Management System",
+      "desc": "Proyek Sehati Training Management System adalah solusi digital yang dirancang untuk mempermudah pengelolaan pelatihan dalam sebuah organisasi. Sistem ini mencakup fitur-fitur seperti pendaftaran peserta, manajemen jadwal pelatihan, pelacakan progres, hingga evaluasi hasil pelatihan. Dengan antarmuka yang intuitif dan fitur otomatisasi yang efisien, Training Management System membantu organisasi dalam merencanakan, melaksanakan, dan memantau kegiatan pelatihan secara menyeluruh. Proyek ini bertujuan untuk meningkatkan efektivitas pelatihan, mengoptimalkan pengelolaan sumber daya, dan mendukung pengembangan keterampilan karyawan secara berkelanjutan.",
+      "img": "/assets/thumbnail/sehati.png",
+      "href": "https://tms.sehati.co.id/",
       "isPublic": true
     },
     {
