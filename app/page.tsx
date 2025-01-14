@@ -128,7 +128,7 @@ export default function Home() {
                 <Flex gap={4} direction={'column'}>
                   <Image src={it.icon} alt="bagiwebsite" width={100} height={100} />
                   <h1 className="tw-text-xl tw-font-bold">{it.title}</h1>
-                  <p>{it.description}</p>
+                  <p className="tw-text-gray-500">{it.description}</p>
                 </Flex>
               </Card>
             ))}
