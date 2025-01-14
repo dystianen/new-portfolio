@@ -4,6 +4,7 @@ import { Button, Card, Container, Divider, Flex, Grid, Image, SimpleGrid } from 
 import { useMediaQuery } from '@mantine/hooks';
 import { IconBuildings, IconBusinessplan, IconUser } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
 import Marquee from 'react-fast-marquee';
 import ReviewCard from './components/ReviewCard';
 import portfolio from './json/portofolio.json';
@@ -12,6 +13,15 @@ import whyUs from './json/whyus.json';
 
 export default function Home() {
   const isMobile = useMediaQuery('(max-width: 62em)');
+  const refWhyUs = useRef<HTMLInputElement>(null);
+  const scrollToElement = () => {
+    if (refWhyUs.current != null) {
+      window.scrollTo({
+        top: refWhyUs.current.offsetTop - 100,
+        behavior: 'smooth'
+      });
+    }
+  };
   return (
     <>
       <section className="tw-bg-pattern-wave tw-bg-cover">
@@ -76,8 +86,9 @@ export default function Home() {
                       outline: '2px solid var(--mantine-primary-color-filled)',
                       outlineOffset: 'calc(.125rem* var(--mantine-scale))'
                     }}
+                    onClick={scrollToElement}
                   >
-                    Start the Transformation
+                    Bangun Bersama Kami
                   </Button>
                 </motion.div>
 
@@ -162,7 +173,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="tw-my-20 tw-flex tw-items-center tw-w-full">
+      <section ref={refWhyUs} className="tw-my-20 tw-flex tw-items-center tw-w-full">
         <Container size={'xl'} w={'100%'}>
           <motion.div
             initial={{ y: 100, opacity: 0 }}
