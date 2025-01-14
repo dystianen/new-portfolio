@@ -52,7 +52,7 @@ const Header = () => {
               width={30}
               height={30}
             />
-            <h1 className="tw-font-bold tw-text-2xl">AGIWEBSITE</h1>
+            <h1 className="tw-font-bold tw-text-2xl tw-leading-6">AGIWEBSITE</h1>
           </Flex>
           <div className="tw-hidden md:tw-flex tw-gap-6">
             <Divider orientation="vertical" />
