@@ -45,14 +45,14 @@ const Header = () => {
     >
       <Container size={'xl'} className="tw-flex tw-justify-between tw-items-center tw-h-20">
         <div className="tw-flex tw-gap-6 tw-items-center">
-          <Flex gap={4} align={'center'}>
+          <Flex gap={4} align={'end'}>
             <Image
               src="/assets/images/logo_bagiwebsite.png"
               alt="BAGIWEBSITE"
               width={30}
               height={30}
             />
-            <h1 className="tw-font-bold tw-text-xl">BAGIWEBSITE</h1>
+            <h1 className="tw-font-bold tw-text-2xl">AGIWEBSITE</h1>
           </Flex>
           <div className="tw-hidden md:tw-flex tw-gap-6">
             <Divider orientation="vertical" />
