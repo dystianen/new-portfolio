@@ -93,6 +93,9 @@ export default function AboutUs() {
                       h={{ base: 150, md: 300 }}
                       w={{ base: '100%', md: 300 }}
                       alt="Norway"
+                      style={{
+                        filter: 'grayscale(40%)'
+                      }}
                     />
                   </Card.Section>
 
