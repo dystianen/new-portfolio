@@ -1,0 +1,22 @@
+[
+  {
+    "image": "/assets/images/zulpan.jpg",
+    "name": "Zulfan Aprianata",
+    "position": "Chief Executive Officer"
+  },
+  {
+    "image": "/assets/images/tian.jpg",
+    "name": "Dystian En Y",
+    "position": "Chief Technology  Officer"
+  },
+  {
+    "image": "/assets/images/roby.jpg",
+    "name": "Roby Rosa",
+    "position": "Chief Operating Officer"
+  },
+  {
+    "image": "/assets/images/ficry.jpg",
+    "name": "Mohammad Ficry P",
+    "position": "Chief Marketing  Officer"
+  }
+]

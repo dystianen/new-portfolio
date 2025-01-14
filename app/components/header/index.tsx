@@ -3,30 +3,69 @@ import { Burger, Button, Container, Divider, Drawer, Flex } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks';
 import { IconPhone } from '@tabler/icons-react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const [opened, { toggle }] = useDisclosure();
+  const route = usePathname();
+
+  const menu = [
+    {
+      href: '/',
+      label: 'Home'
+    },
+    {
+      href: '/about-us',
+      label: 'About Us'
+    },
+    // {
+    //   href: '/services',
+    //   label: 'Services'
+    // },
+    {
+      href: '/portfolio',
+      label: 'Portfolio'
+    }
+    // {
+    //   href: '/blog',
+    //   label: 'Blog'
+    // }
+  ];
+
+  const handleClickContactUs = () => {
+    window.open(
+      'whatsapp://send?phone=+6287763832505&text=Halo, saya ingin mengetahui informasi lebih lanjut mengenai layanan dari bagiwebsite.com!'
+    );
+  };
 
   return (
     <header
       className={`tw-fixed tw-w-full tw-top-0 tw-bg-white tw-z-10 ${opened ? '' : 'tw-shadow-sm'}`}
     >
       <Container size={'xl'} className="tw-flex tw-justify-between tw-items-center tw-h-20">
-        <div className="tw-flex tw-gap-4 tw-items-center">
-          <Image
-            src="/assets/images/logo_bagiwebsite.png"
-            alt="BAGIWEBSITE"
-            width={30}
-            height={30}
-          />
-          <h1 className="tw-font-bold tw-text-xl">BAGIWEBSITE</h1>
-          <div className="tw-hidden md:tw-flex tw-gap-4">
+        <div className="tw-flex tw-gap-6 tw-items-center">
+          <Flex gap={4} align={'center'}>
+            <Image
+              src="/assets/images/logo_bagiwebsite.png"
+              alt="BAGIWEBSITE"
+              width={30}
+              height={30}
+            />
+            <h1 className="tw-font-bold tw-text-xl">BAGIWEBSITE</h1>
+          </Flex>
+          <div className="tw-hidden md:tw-flex tw-gap-6">
             <Divider orientation="vertical" />
             <nav>
               <ul className="tw-flex tw-gap-8">
-                <li>About us</li>
-                <li>Product & Solutions</li>
-                <li>Project us</li>
+                {menu.map((it, index) => (
+                  <li
+                    key={index}
+                    className={route === it.href ? 'tw-border-b-2 tw-border-blue-500' : ''}
+                  >
+                    <Link href={it.href}>{it.label}</Link>
+                  </li>
+                ))}
               </ul>
             </nav>
           </div>
@@ -38,6 +77,7 @@ const Header = () => {
           radius={'xl'}
           leftSection={<IconPhone />}
           display={{ base: 'none', sm: 'block' }}
+          onClick={handleClickContactUs}
         >
           Contact Us
         </Button>
@@ -61,13 +101,19 @@ const Header = () => {
               height: 'max-content'
             }
           }}
+          overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}
         >
           <Flex direction="column" gap={32}>
             <nav className="tw-mt-8">
               <ul className="tw-flex tw-flex-col tw-gap-8">
-                <li>About us</li>
-                <li>Product & Solutions</li>
-                <li>Project us</li>
+                {menu.map((it, index) => (
+                  <li
+                    key={index}
+                    className={route === it.href ? 'tw-border-b-2 tw-border-blue-500 tw-w-max' : ''}
+                  >
+                    <a href={it.href}>{it.label}</a>
+                  </li>
+                ))}
               </ul>
             </nav>
             <Button

@@ -2,7 +2,9 @@ import { MantineProvider } from '@mantine/core';
 import '@mantine/core/styles.css';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import Header from './components/header';
+import NextTopLoader from 'nextjs-toploader';
+import Footer from './components/Footer';
+import Header from './components/Header';
 import theme from './config/theme';
 import './globals.css';
 
@@ -34,8 +36,10 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <MantineProvider theme={theme}>
+          <NextTopLoader />
           <Header />
           <div className="tw-mt-28 lg:tw-mt-8">{children}</div>
+          <Footer />
         </MantineProvider>
       </body>
     </html>
