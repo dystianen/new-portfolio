@@ -36,8 +36,8 @@ export default function AboutUs() {
           </Flex>
 
           <Flex direction={'column'} gap={80}>
-            {portfolio.allData.map((it, index) => (
-              <motion.a
+            {portfolio.map((it, index) => (
+              <motion.div
                 key={index}
                 initial={{ x: index % 2 === 0 ? -100 : 100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -45,8 +45,6 @@ export default function AboutUs() {
                   duration: 1
                 }}
                 viewport={{ once: true }}
-                href={it.href}
-                target="_blank"
               >
                 <Flex
                   gap={'xl'}
@@ -62,12 +60,19 @@ export default function AboutUs() {
                   <Flex direction={'column'} align={'start'} gap={'sm'} w={'100%'}>
                     <h1 className="tw-text-2xl tw-font-bold">{it.title}</h1>
                     <p className="tw-text-gray-500 tw-text-justify">{it.desc}</p>
-                    <Button radius={'xl'} mt={'sm'} leftSection={<IconLink />}>
+                    <Button
+                      radius={'xl'}
+                      mt={'sm'}
+                      leftSection={<IconLink />}
+                      component="a"
+                      href={it.href}
+                      target="_blank"
+                    >
                       Buka Website
                     </Button>
                   </Flex>
                 </Flex>
-              </motion.a>
+              </motion.div>
             ))}
           </Flex>
         </Container>

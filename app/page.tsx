@@ -22,6 +22,11 @@ export default function Home() {
       });
     }
   };
+
+  const halfLength = Math.ceil(portfolio.length / 2); // Membagi panjang array menjadi dua
+  const firstHalf = portfolio.slice(0, halfLength); // Bagian pertama
+  const secondHalf = portfolio.slice(halfLength); // Bagian kedua
+
   return (
     <>
       <section className="tw-bg-pattern-wave tw-bg-cover">
@@ -137,31 +142,30 @@ export default function Home() {
                 <Flex
                   direction={{ base: 'column', md: 'row' }}
                   className="tw-h-auto lg:tw-h-[100dvh]"
-                  gap={20}
+                  gap={10}
                 >
                   <Marquee direction={isMobile ? 'right' : 'down'} style={{ overflowX: 'visible' }}>
-                    {portfolio.data1.map((it, index: number) => (
-                      <div key={index} className="tw-shadow-sm">
-                        <Image
-                          src={it.img}
-                          alt="bagiwebsite-profesional-group"
-                          className="md:tw-rounded-lg tw-shadow-lg tw-object-contain"
-                          w={{ base: 150, md: 200, lg: 300 }}
-                          h={'auto'}
-                          loading="lazy"
-                        />
-                      </div>
-                    ))}
-                  </Marquee>
-                  <Marquee direction={isMobile ? 'left' : 'up'} style={{ overflowX: 'visible' }}>
-                    {portfolio.data2.map((it, index: number) => (
+                    {firstHalf.map((it, index: number) => (
                       <Image
                         key={index}
                         src={it.img}
                         alt="bagiwebsite-profesional-group"
-                        className="md:tw-rounded-lg tw-shadow-lg tw-object-contain"
+                        className="md:tw-rounded-lg tw-shadow-lg tw-object-contain tw-bg-white"
                         w={{ base: 150, md: 200, lg: 300 }}
-                        h={'auto'}
+                        h={{ base: 'auto', lg: 280 }}
+                        loading="lazy"
+                      />
+                    ))}
+                  </Marquee>
+                  <Marquee direction={isMobile ? 'left' : 'up'} style={{ overflowX: 'visible' }}>
+                    {secondHalf.map((it, index: number) => (
+                      <Image
+                        key={index}
+                        src={it.img}
+                        alt="bagiwebsite-profesional-group"
+                        className="md:tw-rounded-lg tw-shadow-lg tw-object-contain tw-bg-white"
+                        w={{ base: 150, md: 200, lg: 300 }}
+                        h={{ base: 'auto', lg: 280 }}
                         loading="lazy"
                       />
                     ))}

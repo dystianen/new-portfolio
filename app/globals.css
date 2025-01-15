@@ -2,25 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+html,
+body {
   color-scheme: light;
+  scroll-behavior: smooth;
 }
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
-
-/* @media (data-mantine-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
 
 body {
   color: var(--foreground);

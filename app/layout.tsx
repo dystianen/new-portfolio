@@ -20,8 +20,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'BAGIWEBSITE',
-  description: 'Layanan pembuatan website, aplikasi, dan solusi digital lainnya.',
-  icons: '/assets/images/logo_bagiwebsite.png'
+  description: 'Layanan pembuatan website, aplikasi, dan solusi digital lainnya.'
 };
 
 export default function RootLayout({
