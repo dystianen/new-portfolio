@@ -10,7 +10,7 @@ export default function AboutUs() {
   return (
     <>
       <section className="tw-mt-32">
-        <Flex gap={40} direction={'column'} h={{ base: '90dvh', md: '95dvh' }}>
+        <Flex gap={40} direction={'column'} h={{ base: '90vh', md: '95dvh' }}>
           <Container size={'xl'}>
             <h1 className="tw-text-4xl md:tw-text-6xl lg:tw-text-8xl tw-text-center tw-tracking-[0.4em]">
               PORTFOLIO

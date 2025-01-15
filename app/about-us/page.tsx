@@ -10,7 +10,7 @@ export default function AboutUs() {
   return (
     <>
       <section className="tw-mt-32">
-        <Flex gap={40} direction={'column'} h={{ base: '90dvh', md: '100dvh' }}>
+        <Flex gap={40} direction={'column'} h={{ base: '90vh', md: '100dvh' }}>
           <Container size={'xl'}>
             <h1 className="tw-text-3xl md:tw-text-6xl lg:tw-text-8xl tw-text-center tw-tracking-[0.4em]">
               BAGIWEBSITE
@@ -61,7 +61,7 @@ export default function AboutUs() {
             <Flex direction={'column'} align={'center'} mb={40} gap={16}>
               <h1 className="tw-text-2xl md:tw-text-4xl tw-text-center tw-font-semibold">Misi</h1>
               <Card withBorder radius={'lg'}>
-                <ol className="tw-max-w-3xl tw-text-gray-500">
+                <ol className="tw-max-w-3xl tw-text-gray-500 tw-flex tw-flex-col tw-gap-4">
                   <li>
                     1. Memberikan layanan pembuatan website, aplikasi, dan solusi digital lainnya
                     yang disesuaikan dengan kebutuhan bisnis klien.
