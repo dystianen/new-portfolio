@@ -20,7 +20,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'BAGIWEBSITE',
-  description: 'Layanan pembuatan website, aplikasi, dan solusi digital lainnya.'
+  description: 'Layanan pembuatan website, aplikasi, dan solusi digital lainnya.',
+  openGraph: {
+    images: '/assets/thumbnail/thumbnail_bagiwebsite.png'
+  }
 };
 
 export default function RootLayout({
