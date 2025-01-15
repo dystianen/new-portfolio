@@ -16,14 +16,14 @@ export default function AboutUs() {
               BAGIWEBSITE
             </h1>
           </Container>
-          <div className="tw-relative tw-h-[700px] lg:tw-h-[600px] tw-w-full">
+          <div className="tw-relative tw-h-[700px] lg:tw-h-[600px]">
             {/* Adjust height as needed */}
             <Image
               src={'/assets/images/about_us.jpg'}
               alt="about-us"
-              width={'100%'}
-              height={'100%'}
-              className="tw-object-cover tw-w-full tw-h-full"
+              w={'100%'}
+              h={'100%'}
+              className="tw-object-cover"
             />
             <div className="tw-absolute tw-top-0 tw-left-0 tw-w-full tw-h-full tw-bg-black tw-opacity-50"></div>{' '}
             {/* Black transparent overlay */}
