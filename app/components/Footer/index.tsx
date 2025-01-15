@@ -43,34 +43,34 @@ const Footer = () => {
             </Grid.Col>
             <Grid.Col span={{ base: 6, md: 2 }}>
               <div className="tw-flex tw-flex-col tw-gap-2">
-                <a href="About">About</a>
-                <a href="About">Features</a>
-                <a href="About">Works</a>
-                <a href="About">Career</a>
+                <a href="#">About</a>
+                <a href="#">Features</a>
+                <a href="#">Works</a>
+                <a href="#">Career</a>
               </div>
             </Grid.Col>
             <Grid.Col span={{ base: 6, md: 2 }}>
               <div className="tw-flex tw-flex-col tw-gap-2">
-                <a href="About">Customer Support</a>
-                <a href="About">Delivery Details</a>
-                <a href="About">Terms & Conditions</a>
-                <a href="About">Privacy Policy</a>
+                <a href="#">Customer Support</a>
+                <a href="#">Delivery Details</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
               </div>
             </Grid.Col>
             <Grid.Col span={{ base: 6, md: 2 }}>
               <div className="tw-flex tw-flex-col tw-gap-2">
-                <a href="About">Account</a>
-                <a href="About">Manage Deliveries</a>
-                <a href="About">Orders</a>
-                <a href="About">Payments</a>
+                <a href="#">Account</a>
+                <a href="#">Manage Deliveries</a>
+                <a href="#">Orders</a>
+                <a href="#">Payments</a>
               </div>
             </Grid.Col>
             <Grid.Col span={{ base: 6, md: 2 }}>
               <div className="tw-flex tw-flex-col tw-gap-2">
-                <a href="About">Free eBooks</a>
-                <a href="About">Development Tutorial</a>
-                <a href="About">How to - Blog</a>
-                <a href="About">Youtube Playlist</a>
+                <a href="#">Free eBooks</a>
+                <a href="#">Development Tutorial</a>
+                <a href="#">How to - Blog</a>
+                <a href="#">Youtube Playlist</a>
               </div>
             </Grid.Col>
           </Grid>
