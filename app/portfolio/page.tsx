@@ -56,7 +56,7 @@ export default function AboutUs() {
                     src={it.img}
                     alt={it.title}
                     w={'450px'}
-                    className="tw-rounded-xl tw-shadow-xl"
+                    className="tw-rounded-xl tw-shadow-xl tw-object-contain"
                   />
 
                   <Flex direction={'column'} align={'start'} gap={'sm'} w={'100%'}>
