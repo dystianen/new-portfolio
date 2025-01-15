@@ -12,17 +12,9 @@ export default function AboutUs() {
       <section className="tw-mt-32">
         <Flex gap={40} direction={'column'} h={{ base: '90dvh', md: '100dvh' }}>
           <Container size={'xl'}>
-            <motion.h1
-              initial={{ scale: 0.6, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{
-                duration: 0.5
-              }}
-              viewport={{ once: true }}
-              className="tw-text-3xl md:tw-text-6xl lg:tw-text-8xl tw-text-center tw-tracking-[0.4em]"
-            >
+            <h1 className="tw-text-3xl md:tw-text-6xl lg:tw-text-8xl tw-text-center tw-tracking-[0.4em]">
               BAGIWEBSITE
-            </motion.h1>
+            </h1>
           </Container>
           <div className="tw-relative tw-h-[700px] lg:tw-h-[600px] tw-w-full">
             {/* Adjust height as needed */}
