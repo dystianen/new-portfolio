@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <footer className="tw-pt-5">
       <Card className="tw-border-t tw-border-gray-300 tw-py-8 tw-rounded-none">
-        <Container size={'xl'} className="tw-flex tw-flex-col tw-gap-2 tw-w-full">
+        <Container p={0} size={'xl'} className="tw-flex tw-flex-col tw-gap-2 tw-w-full">
           <Flex gap={4} align={'center'}>
             <Image
               src="/assets/images/logo_bagiwebsite.png"
