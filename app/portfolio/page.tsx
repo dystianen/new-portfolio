@@ -42,7 +42,8 @@ export default function AboutUs() {
                 initial={{ x: index % 2 === 0 ? -100 : 100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{
-                  duration: 1
+                  duration: 1,
+                  delay: 0.5
                 }}
                 viewport={{ once: true }}
               >
