@@ -12,7 +12,7 @@ export default function AboutUs() {
       <section className="tw-mt-32">
         <Flex gap={40} direction={'column'} h={{ base: '90dvh', md: '95dvh' }}>
           <Container size={'xl'}>
-            <h1 className="tw-text-3xl md:tw-text-6xl lg:tw-text-8xl tw-text-center tw-tracking-[0.4em]">
+            <h1 className="tw-text-4xl md:tw-text-6xl lg:tw-text-8xl tw-text-center tw-tracking-[0.4em]">
               PORTFOLIO
             </h1>
           </Container>
@@ -31,16 +31,24 @@ export default function AboutUs() {
 
       <section className="tw-my-10 tw-flex tw-w-full">
         <Container size={'lg'} w={'100%'}>
-          <Flex direction={'column'} align={'center'} mb={50} gap={16}>
-            <h1 className="tw-text-2xl md:tw-text-4xl tw-text-center tw-font-semibold">Projects</h1>
-          </Flex>
+          <motion.h1
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 1
+            }}
+            viewport={{ once: true }}
+            className="tw-text-4xl md:tw-text-6xl lg:tw-text-8xl tw-tracking-[0.4em] tw-mb-14"
+          >
+            PROJECTS
+          </motion.h1>
 
-          <Flex direction={'column'} gap={80}>
+          <Flex direction={'column'} gap={80} w={'100%'} pos={'relative'}>
             {portfolio.map((it, index) => (
               <motion.div
                 key={index}
-                initial={{ x: index % 2 === 0 ? -100 : 100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
                 transition={{
                   duration: 1,
                   delay: 0.5

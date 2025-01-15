@@ -8,8 +8,8 @@ type TReviewCard = {
 
 const ReviewCard = ({ name, rating, comment }: TReviewCard) => {
   return (
-    <Card withBorder w={400} h={160} radius={'lg'} m={8}>
-      <Flex gap={16}>
+    <Card withBorder w={{ base: 300, md: 400 }} h={{ base: 250, md: 160 }} radius={'lg'} m={8}>
+      <Flex direction={{ base: 'column', md: 'row' }} gap={16}>
         <Avatar radius="xl" size={50} />
         <Flex direction={'column'} gap={6}>
           <h5 className="tw-font-bold">{name}</h5>

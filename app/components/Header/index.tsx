@@ -122,6 +122,7 @@ const Header = () => {
               w={'max-content'}
               radius={'xl'}
               leftSection={<IconPhone />}
+              onClick={handleClickContactUs}
             >
               Contact Us
             </Button>
