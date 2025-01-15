@@ -124,7 +124,7 @@ export default function AboutUs() {
                   }}
                   viewport={{ once: true }}
                 >
-                  <Card shadow="sm" padding="lg" radius="md">
+                  <Card shadow="sm" p={{ base: 'sm', md: 'lg' }} radius="md">
                     <Card.Section>
                       <Image
                         src={it.image}
@@ -137,7 +137,7 @@ export default function AboutUs() {
                       />
                     </Card.Section>
 
-                    <Flex direction={'column'} gap={5} mt="md">
+                    <Flex direction={'column'} gap={5} mt={{ base: 'sm', md: 'md' }}>
                       <Text fw={600}>{it.name}</Text>
                       <Badge color="pink">{it.position}</Badge>
                     </Flex>
