@@ -61,7 +61,7 @@ const Header = () => {
                 {menu.map((it, index) => (
                   <li
                     key={index}
-                    className={route === it.href ? 'tw-border-b-2 tw-border-blue-500' : ''}
+                    className={route === it.href ? 'tw-border-b-2 tw-border-[#1c7ed6]' : ''}
                   >
                     <Link href={it.href}>{it.label}</Link>
                   </li>
