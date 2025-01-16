@@ -116,8 +116,8 @@ export default function AboutUs() {
               {ourTeams.map((it, index) => (
                 <motion.div
                   key={index}
-                  initial={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   transition={{
                     duration: 1,
                     delay: 0.5 * index

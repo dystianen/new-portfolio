@@ -47,7 +47,7 @@ export default function AboutUs() {
             {portfolio.map((it, index) => (
               <motion.div
                 key={index}
-                initial={{ scale: 0.8, opacity: 0 }}
+                initial={{ scale: 0.9, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{
                   duration: 1,

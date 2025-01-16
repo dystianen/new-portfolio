@@ -11,6 +11,7 @@ import {
   Stack
 } from '@mantine/core';
 import { IconCheck, IconInfoCircle } from '@tabler/icons-react';
+import { motion } from 'framer-motion';
 import services from '../json/services.json';
 
 export default function AboutUs() {
@@ -33,19 +34,28 @@ export default function AboutUs() {
               untuk memenuhi kebutuhan Anda, Semua layanan kami dilengkapi dengan fitur terbaik,
               harga kompetitif, dan dukungan penuh untuk memastikan hasil maksimal.
             </p>
-            <Alert
-              className="tw-max-w-4xl"
-              variant="light"
-              color="yellow"
-              title="Free Konsultasi"
-              icon={<IconInfoCircle />}
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 1
+              }}
+              viewport={{ once: true }}
             >
-              <p className="tw-text-black/80">
-                Tidak yakin harus mulai dari mana? Tim ahli kami siap membantu Anda memahami
-                kebutuhan proyek Anda tanpa biaya tambahan! Dapatkan saran terbaik sebelum memulai
-                proyek Anda bersama kami.
-              </p>
-            </Alert>
+              <Alert
+                className="tw-max-w-4xl"
+                variant="light"
+                color="yellow"
+                title="Free Konsultasi"
+                icon={<IconInfoCircle />}
+              >
+                <p className="tw-text-black/80">
+                  Tidak yakin harus mulai dari mana? Tim ahli kami siap membantu Anda memahami
+                  kebutuhan proyek Anda tanpa biaya tambahan! Dapatkan saran terbaik sebelum memulai
+                  proyek Anda bersama kami.
+                </p>
+              </Alert>
+            </motion.div>
           </Flex>
         </Container>
         <Divider w={'100%'} mt={'xl'} />
@@ -55,33 +65,45 @@ export default function AboutUs() {
         <Container size={'xl'} w={'100%'}>
           <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }}>
             {services.map((it, index) => (
-              <Card key={index} shadow="md" radius="md">
-                <Stack justify="space-between" h={'100%'}>
-                  <Stack>
-                    <h1 className="tw-text-xl tw-font-semibold">{it.name}</h1>
-                    <ol>
-                      {it.features.map((feature, idx) => (
-                        <Group key={idx} wrap="nowrap" align="start" gap={'xs'}>
-                          <div>
-                            <IconCheck color="green" />
-                          </div>
-                          <li key={idx}>{feature}</li>
-                        </Group>
-                      ))}
-                    </ol>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{
+                  duration: 1,
+                  delay: 0.2 * index
+                }}
+                viewport={{ once: true }}
+                className="tw-h-full"
+              >
+                <Card key={index} shadow="md" radius="md" h={'100%'}>
+                  <Stack justify="space-between" h={'100%'}>
+                    <Stack>
+                      <h1 className="tw-text-xl tw-font-semibold">{it.name}</h1>
+                      <ol>
+                        {it.features.map((feature, idx) => (
+                          <Group key={idx} wrap="nowrap" align="start" gap={'xs'}>
+                            <div>
+                              <IconCheck color="green" />
+                            </div>
+                            <li key={idx}>{feature}</li>
+                          </Group>
+                        ))}
+                      </ol>
+                    </Stack>
+                    <Stack>
+                      <div>
+                        <p>Price</p>
+                        <h1 className="tw-text-lg tw-font-semibold">{it.price_range}</h1>
+                        <span className="tw-text-amber-500 tw-italic">* Diskon {it.discount}</span>
+                      </div>
+                      <Button radius={'xl'} onClick={() => handleClickService(it.name)}>
+                        Pesan Sekarang
+                      </Button>
+                    </Stack>
                   </Stack>
-                  <Stack>
-                    <div>
-                      <p>Price</p>
-                      <h1 className="tw-text-lg tw-font-semibold">{it.price_range}</h1>
-                      <span className="tw-text-amber-500 tw-italic">* Diskon {it.discount}</span>
-                    </div>
-                    <Button radius={'xl'} onClick={() => handleClickService(it.name)}>
-                      Pesan Sekarang
-                    </Button>
-                  </Stack>
-                </Stack>
-              </Card>
+                </Card>
+              </motion.div>
             ))}
           </SimpleGrid>
         </Container>
