@@ -54,10 +54,10 @@ const Header = () => {
             />
             <h1 className="tw-font-bold tw-text-2xl">BAGIWEBSITE</h1>
           </Flex>
-          <div className="tw-hidden md:tw-flex tw-gap-6">
+          <div className="tw-hidden md:tw-flex sm:tw-gap-4 lg:tw-gap-6">
             <Divider orientation="vertical" />
             <nav>
-              <ul className="tw-flex tw-gap-8">
+              <ul className="tw-flex sm:tw-gap-4 lg:tw-gap-8">
                 {menu.map((it, index) => (
                   <li
                     key={index}
