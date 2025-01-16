@@ -93,7 +93,7 @@ export default function AboutUs() {
                     </Stack>
                     <Stack>
                       <div>
-                        <p>Price</p>
+                        <p>Price :</p>
                         <h1 className="tw-text-lg tw-font-semibold">{it.price_range}</h1>
                         <span className="tw-text-amber-500 tw-italic">* Diskon {it.discount}</span>
                       </div>
