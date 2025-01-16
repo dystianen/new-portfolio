@@ -82,12 +82,14 @@ export default function AboutUs() {
                       <h1 className="tw-text-xl tw-font-semibold">{it.name}</h1>
                       <ol>
                         {it.features.map((feature, idx) => (
-                          <Group key={idx} wrap="nowrap" align="start" gap={'xs'}>
-                            <div>
-                              <IconCheck color="green" />
-                            </div>
-                            <li key={idx}>{feature}</li>
-                          </Group>
+                          <li key={idx}>
+                            <Group wrap="nowrap" align="start" gap={'xs'}>
+                              <div>
+                                <IconCheck color="green" />
+                              </div>
+                              {feature}
+                            </Group>
+                          </li>
                         ))}
                       </ol>
                     </Stack>
