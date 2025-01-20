@@ -19,6 +19,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://bagiwebsite.com'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+      'de-DE': '/de-DE',
+    },
+  },
   title: 'BAGIWEBSITE',
   description: 'Layanan pembuatan website, aplikasi, dan solusi digital lainnya.',
   openGraph: {
