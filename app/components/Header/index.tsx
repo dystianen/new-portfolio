@@ -41,7 +41,7 @@ const Header = () => {
 
   return (
     <header
-      className={`tw-fixed tw-w-full tw-top-0 tw-bg-white tw-z-10 ${opened ? '' : 'tw-shadow-sm'}`}
+      className={`tw-fixed tw-w-full tw-top-0 tw-bg-black tw-z-10 ${opened ? '' : 'tw-shadow-sm'}`}
     >
       <Container size={'xl'} className="tw-flex tw-justify-between tw-items-center tw-h-20">
         <div className="tw-flex tw-gap-6 tw-items-center">
@@ -52,7 +52,7 @@ const Header = () => {
               width={30}
               height={30}
             />
-            <h2 className="tw-font-bold tw-text-2xl">BAGIWEBSITE</h2>
+            <h2 className="tw-font-bold tw-text-2xl">DEVYUS</h2>
           </Flex>
           <div className="tw-hidden md:tw-flex sm:tw-gap-4 lg:tw-gap-6">
             <Divider orientation="vertical" />

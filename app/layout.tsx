@@ -1,8 +1,9 @@
-import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
 import '@mantine/core/styles.css';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
+import { Suspense } from 'react';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import theme from './config/theme';
@@ -24,10 +25,10 @@ export const metadata: Metadata = {
     canonical: '/',
     languages: {
       'en-US': '/en-US',
-      'de-DE': '/de-DE',
-    },
+      'de-DE': '/de-DE'
+    }
   },
-  title: 'BAGIWEBSITE',
+  title: 'DEVYUS',
   description: 'Layanan pembuatan website, aplikasi, dan solusi digital lainnya.',
   openGraph: {
     images: '/assets/thumbnail/thumbnail_bagiwebsite.png'
@@ -40,9 +41,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-mantine-color-scheme="light">
+    <html lang="en" {...mantineHtmlProps}>
       <head>
-        <ColorSchemeScript />
+        <Suspense>
+          <ColorSchemeScript defaultColorScheme="auto" />
+        </Suspense>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <MantineProvider theme={theme}>

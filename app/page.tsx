@@ -1,13 +1,11 @@
 'use client';
 
-import { Button, Card, Container, Divider, Flex, Grid, Image, SimpleGrid } from '@mantine/core';
+import { Button, Card, Container, Flex, Grid, Image, SimpleGrid } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import { IconBuildings, IconBusinessplan, IconUser } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import Marquee from 'react-fast-marquee';
 import ReviewCard from './components/ReviewCard';
-import portfolio from './json/portofolio.json';
 import review from './json/review.json';
 import whyUs from './json/whyus.json';
 
@@ -23,32 +21,16 @@ export default function Home() {
     }
   };
 
-  const halfLength = Math.ceil(portfolio.length / 2); // Membagi panjang array menjadi dua
-  const firstHalf = portfolio.slice(0, halfLength); // Bagian pertama
-  const secondHalf = portfolio.slice(halfLength); // Bagian kedua
-
   return (
     <>
-      <section className="tw-bg-pattern-wave tw-bg-cover">
+      <section className="tw-bg-pattern-wave tw-bg-cover tw-min-h-[100dvh]">
         <Container
           size={'xl'}
-          className="tw-flex tw-justify-center tw-gap-4 tw-items-center tw-overflow-hidden"
+          className="tw-flex tw-justify-center tw-gap-4 tw-items-center tw-overflow-hidden tw-min-h-[100dvh]"
         >
-          <Grid gutter={'xl'} align="center" w={'100%'}>
+          <Grid gutter={'xl'} align="center" w={'100%'} h={'100%'}>
             <Grid.Col span={{ base: 12, md: 6 }}>
               <Flex direction={'column'} gap={'xl'} justify={'center'} pr={{ base: 0, md: 50 }}>
-                <motion.div
-                  initial={{ x: -100, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{
-                    duration: 0.5
-                  }}
-                  viewport={{ once: true }}
-                >
-                  <Card withBorder radius={'xl'} w={'max-content'} py={5}>
-                    IT Services & Solutions
-                  </Card>
-                </motion.div>
                 <motion.h1
                   initial={{ scale: 0.6, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
@@ -58,7 +40,8 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="tw-text-3xl lg:tw-text-6xl tw-font-bold"
                 >
-                  Ubah Ide Anda Menjadi Sesuatu yang Menakjubkan
+                  <p className="tw-text-2xl">I am Tian</p>
+                  Software Engineer
                 </motion.h1>
                 <motion.p
                   initial={{ scale: 0.6, opacity: 0 }}
@@ -93,86 +76,12 @@ export default function Home() {
                     }}
                     onClick={scrollToElement}
                   >
-                    Bangun Bersama Kami
+                    More About Me
                   </Button>
-                </motion.div>
-
-                <motion.div
-                  initial={{ x: -100, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{
-                    duration: 0.5
-                  }}
-                  viewport={{ once: true }}
-                >
-                  <Card shadow={'sm'} radius={'md'}>
-                    <Flex
-                      gap={{ base: 'md', md: 'xl' }}
-                      justify={'space-around'}
-                      className="tw-text-gray-500"
-                    >
-                      <Flex direction={'column'} gap={4} align={'center'}>
-                        <IconUser size={isMobile ? 30 : 40} />
-                        <h1 className="tw-text-lg">Individuals</h1>
-                      </Flex>
-                      <Divider orientation="vertical" />
-                      <Flex direction={'column'} gap={4} align={'center'}>
-                        <IconBusinessplan size={isMobile ? 30 : 40} />
-                        <h1 className="tw-text-lg">Bussiness</h1>
-                      </Flex>
-                      <Divider orientation="vertical" />
-                      <Flex direction={'column'} gap={4} align={'center'}>
-                        <IconBuildings size={isMobile ? 30 : 40} />
-                        <h1 className="tw-text-lg">Companies</h1>
-                      </Flex>
-                    </Flex>
-                  </Card>
                 </motion.div>
               </Flex>
             </Grid.Col>
-            <Grid.Col span={{ base: 12, md: 6 }}>
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{
-                  duration: 1.5
-                }}
-                viewport={{ once: true }}
-              >
-                <Flex
-                  direction={{ base: 'column', md: 'row' }}
-                  className="tw-h-auto lg:tw-h-[100dvh]"
-                  gap={10}
-                >
-                  <Marquee direction={isMobile ? 'right' : 'down'} style={{ overflowX: 'visible' }}>
-                    {firstHalf.map((it, index: number) => (
-                      <Image
-                        key={index}
-                        src={it.img}
-                        alt="bagiwebsite-profesional-group"
-                        className="md:tw-rounded-lg tw-shadow-lg !tw-object-contain tw-bg-white"
-                        w={{ base: 150, md: 200, lg: 300 }}
-                        h={{ base: 'auto', lg: 280 }}
-                        loading="lazy"
-                      />
-                    ))}
-                  </Marquee>
-                  <Marquee direction={isMobile ? 'left' : 'up'} style={{ overflowX: 'visible' }}>
-                    {secondHalf.map((it, index: number) => (
-                      <Image
-                        key={index}
-                        src={it.img}
-                        alt="bagiwebsite-profesional-group"
-                        className="md:tw-rounded-lg tw-shadow-lg !tw-object-contain tw-bg-white"
-                        w={{ base: 150, md: 200, lg: 300 }}
-                        h={{ base: 'auto', lg: 280 }}
-                        loading="lazy"
-                      />
-                    ))}
-                  </Marquee>
-                </Flex>
-              </motion.div>
-            </Grid.Col>
+            <Grid.Col span={{ base: 12, md: 6 }}></Grid.Col>
           </Grid>
         </Container>
       </section>
