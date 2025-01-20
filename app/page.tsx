@@ -150,7 +150,7 @@ export default function Home() {
                         key={index}
                         src={it.img}
                         alt="bagiwebsite-profesional-group"
-                        className="md:tw-rounded-lg tw-shadow-lg tw-object-contain tw-bg-white"
+                        className="md:tw-rounded-lg tw-shadow-lg !tw-object-contain tw-bg-white"
                         w={{ base: 150, md: 200, lg: 300 }}
                         h={{ base: 'auto', lg: 280 }}
                         loading="lazy"
@@ -163,7 +163,7 @@ export default function Home() {
                         key={index}
                         src={it.img}
                         alt="bagiwebsite-profesional-group"
-                        className="md:tw-rounded-lg tw-shadow-lg tw-object-contain tw-bg-white"
+                        className="md:tw-rounded-lg tw-shadow-lg !tw-object-contain tw-bg-white"
                         w={{ base: 150, md: 200, lg: 300 }}
                         h={{ base: 'auto', lg: 280 }}
                         loading="lazy"
