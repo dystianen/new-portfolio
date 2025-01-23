@@ -4,9 +4,9 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 import { Suspense } from 'react';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import theme from './config/theme';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import theme from '../config/theme';
 import './globals.css';
 
 const geistSans = Geist({
@@ -21,15 +21,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://bagiwebsite.com'),
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en-US': '/en-US',
-      'de-DE': '/de-DE'
-    }
-  },
   title: 'DEVYUS',
-  description: 'Layanan pembuatan website, aplikasi, dan solusi digital lainnya.',
+  description: 'Software Engineer & Freelancer',
   openGraph: {
     images: '/assets/thumbnail/thumbnail_bagiwebsite.png'
   }

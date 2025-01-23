@@ -3,7 +3,7 @@ import { Button, Container, Flex, Image } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { IconLink } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
-import portfolio from '../json/portofolio.json';
+import portfolio from '../../json/portofolio.json';
 
 export default function AboutUs() {
   const isMobile = useMediaQuery('(max-width: 62em)');

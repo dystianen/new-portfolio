@@ -12,7 +12,7 @@ import {
 } from '@mantine/core';
 import { IconCheck, IconInfoCircle } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
-import services from '../json/services.json';
+import services from '../../json/services.json';
 
 export default function AboutUs() {
   const handleClickService = (keyword: string) => {

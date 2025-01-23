@@ -3,7 +3,7 @@
 import { Badge, Card, Container, Flex, Image, SimpleGrid, Text } from '@mantine/core';
 import { IconQuoteFilled } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
-import ourTeams from '../json/teams.json';
+import ourTeams from '../../json/teams.json';
 
 export default function AboutUs() {
   // const isMobile = useMediaQuery('(max-width: 62em)');

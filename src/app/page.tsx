@@ -5,9 +5,11 @@ import { useMediaQuery } from '@mantine/hooks';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import Marquee from 'react-fast-marquee';
-import ReviewCard from './components/ReviewCard';
-import review from './json/review.json';
-import whyUs from './json/whyus.json';
+import SplitText from '../components/Animations/SplitText';
+import TrueFocus from '../components/Animations/TrueFocus';
+import ReviewCard from '../components/ReviewCard';
+import review from '../json/review.json';
+import whyUs from '../json/whyus.json';
 
 export default function Home() {
   const isMobile = useMediaQuery('(max-width: 62em)');
@@ -19,6 +21,10 @@ export default function Home() {
         behavior: 'smooth'
       });
     }
+  };
+
+  const handleAnimationComplete = () => {
+    console.log('All letters have animated!');
   };
 
   return (
@@ -40,8 +46,25 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="tw-text-3xl lg:tw-text-6xl tw-font-bold"
                 >
-                  <p className="tw-text-2xl">I am Tian</p>
-                  Software Engineer
+                  <SplitText
+                    text="Hello, I am Tian!"
+                    className="text-2xl font-semibold text-center"
+                    delay={150}
+                    animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
+                    animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+                    easing="easeOutCubic"
+                    threshold={0.2}
+                    rootMargin="-50px"
+                    onLetterAnimationComplete={handleAnimationComplete}
+                  />
+                  <TrueFocus
+                    sentence="Software Engineer"
+                    manualMode={false}
+                    blurAmount={5}
+                    borderColor="red"
+                    animationDuration={2}
+                    pauseBetweenAnimations={1}
+                  />
                 </motion.h1>
                 <motion.p
                   initial={{ scale: 0.6, opacity: 0 }}
